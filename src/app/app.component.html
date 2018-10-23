@@ -9,11 +9,11 @@
 	<input type="text" name="name" [(ngModel)]= "title">
 	<app-server></app-server>
 	<div>
-		<a href="register" routerLink="/heroes">Register</a>
-	</div>
-	
+		<a href="register" routerLink="/register">Register</a>
+  </div>
+  
 </div>
-
+<router-outlet></router-outlet>
 <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item" *ngFor="let image of sliderImages" [ngClass]="{'active' : i == 0}">

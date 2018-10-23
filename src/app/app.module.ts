@@ -7,13 +7,15 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ServerComponent } from './server/server.component';
 import { AppComponent } from './app.component';
+import { Routing } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ServerComponent
+    ServerComponent,
+    Routing
   ],
   imports: [
     BrowserModule, //base functionality to start app
