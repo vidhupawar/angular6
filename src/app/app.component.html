@@ -1,19 +1,20 @@
 
-
 <div class="container">
-	<div style="text-align:center">
-	  <h1>
-	    Welcome to {{ title }}!
-	  </h1>
-	</div>
-	<input type="text" name="name" [(ngModel)]= "title">
-	<app-server></app-server>
-	<div>
-		<a href="register" routerLink="/register">Register</a>
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  <label for="">{{ title }}</label>
+  <div>
+    <span><a href="register" routerLink="/register">Register</a></span>
+    <span> / </span>
+    <span><a href="login" routerLink="/login">Login</a></span>
+    
+    <router-outlet></router-outlet>
   </div>
   
 </div>
-<router-outlet></router-outlet>
 <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item" *ngFor="let image of sliderImages" [ngClass]="{'active' : i == 0}">
