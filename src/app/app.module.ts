@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { Routing } from './app-routing.module';
 import { AppConfig } from './app.config';
 import { AppService } from './service/app.service';
+import { TransferService } from './service/transfer.service';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -26,15 +27,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpModule,
     Routing,
     HttpClientModule
+
   ],
   providers: [
     AppService,
-    AppConfig
+    AppConfig,
+    TransferService
   ],
   bootstrap: [AppComponent],
 })
+
 export class AppModule { }
-export const AppLayoutRoutes: Routes = [
-  { path: 'login', component: LoginComponent},
-  { path: 'register', component: RegisterComponent}
-];

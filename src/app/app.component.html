@@ -1,5 +1,20 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">ANGULAR 6</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">{{checkLocation | titlecase}}</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">      
+      <li *ngIf="!loggedInUser"><a href="login" routerLink="/login">Login</a></li>
+      <li *ngIf="loggedInUser"><a href="login" routerLink="/login" (click)="logoutUser()">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
 
-<div class="container">
+<!-- <div class="container">
   <div style="text-align:center">
     <h1>
       Welcome to {{ title }}!
@@ -7,14 +22,15 @@
   </div>
   <label for="">{{ title }}</label>
   <div>
-    <span><a href="register" routerLink="/register">Register</a></span>
+    <span><a href="register" routerLink="/register"><button>Register</button></a></span>
     <span> / </span>
-    <span><a href="login" routerLink="/login">Login</a></span>
+    <span><a href="login" routerLink="/login"><button>Login</button></a></span>
+    <span> / </span>
+    <span><a href="logout" routerLink="/logout" ><button [ngClass]="primary" (click)="logoutUser()">Logout</button></a></span>
     
-    <router-outlet></router-outlet>
   </div>
   
-</div>
+</div> -->
 <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item" *ngFor="let image of sliderImages" [ngClass]="{'active' : i == 0}">

@@ -4,10 +4,14 @@ import { LoginComponent } from '../app/login/login.component';
 import { RegisterComponent } from '../app/register/register.component';
 import { DashboardComponent } from '../app/dashboard/dashboard.component';
 
+
+var token: String = "";
+token = localStorage.getItem("token");
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  // { path: 'dashboard/:id', component: DashboardComponent , canActivate: [token]}
+  { path: 'dashboard', component: DashboardComponent}
 ];
 
 @NgModule({
